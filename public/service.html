@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link rel="shortcut icon" type="image/x-icon"  rel="icon" href="favicon.ico">
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Trudge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+
+</head>
+<body ng-app="starter">
+<!--header-->
+<div class="banner banner-in">
+    <div class="header" ng-include="'head.html'">
+    </div>
+    <div class="barcontainer">
+        <h6><a href="/index.html">首页</a>/ <span>{{ser.realname}}</span></h6>
+    </div>
+</div>
+<!---->
+<div class="container">
+    <div class="single">
+        <div class="single-middle">
+            <div class="col-md-7 need">
+                <img class="img-responsive" ng-src="{{ser.data.images}}" alt="">
+            </div>
+            <div class="col-md-5 tag">
+                <div class="social-in">
+                    <div class="col-md-3">
+                        <p>姓名 <div ng-bind="ser.data.realname"></div></p>
+                    </div>
+                    <div class="col-md-3 ">
+                        <p>电话<div ng-bind="ser.data.phone"></div></p>
+                    </div>
+                    <div class="col-md-3 ">
+                        <p>从业时间<div ng-bind="ser.data.serviceAge"></div></p>
+                    </div>
+                    <div class="col-md-3 ">
+                        <p>服务等级<div ng-bind="ser.data.servicegrade"></div></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <p class="tag-in">
+                    <span ng-bind="ser.data.message"></span>
+                </p>
+            </div>
+            <div>
+                <p>直接咨询:<p><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2585449600&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2585449600:41" alt="欢迎咨询" title="欢迎咨询"></a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="content-bottom">
+    <div class="comments-area">
+        <div class="social-in">
+            <h5 class="fh3">填写联系方式</h5>
+            <p>方便{{ser.realname}}及时为您服务,或者直接致电服务人员,谢谢</p>
+        </div>
+        <form name="f" id ="f" ng-submit="submit()">
+            <div class="reservation">
+                <ul>
+                    <li class="span1_of_1 left">
+                        <h5>姓名</h5>
+                        <div class="book_date">
+                            <input type="text" placeholder="请输入姓名" required="" style="width: 229px;">
+                        </div>
+                    </li>
+                    <li class="span1_of_1 left">
+                        <h5>电话</h5>
+                        <div class="book_date">
+                            <input type="text" placeholder="请输入手机号" required="" style="width: 229px;">
+                        </div>
+                    </li>
+                    <li class="span1_of_1 left">
+                        <h5>目的地</h5>
+                        <div class="book_date">
+                            <input type="text" placeholder="目的地" required="" style="width: 229px;">
+                        </div>
+                    </li>
+                    <li class="span1_of_1 left">
+                        <h5>时间</h5>
+                        <div class="book_date">
+                            <input type="text" placeholder="出发时间" required="" style="width: 229px;">
+                        </div>
+                    </li>
+                    <li class="span1_of_1">
+                        <h5>选择服务</h5>
+                        <!----------start section_room----------->
+                        <div class="section_room">
+                            <select id="country" onchange="change_country(this.value)" class="frm-field required">
+                                <option value="null">定制服务</option>
+                                <option value="null">机票</option>
+                                <option value="AX">签证</option>
+                                <option value="AX">地接</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="span1_of_3">
+                        <div class="date_btn">
+                            <input type="submit" value="提交" style="width: 131px;">
+                        </div>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="content-bottom-in">
+    <div class="container">
+        <ul class="social">
+            <li><a href="#"><i> </i></a></li>
+            <li><a href="#"><i class="twitter"> </i></a></li>
+            <li><a href="#"><i class="dribble"> </i></a></li>
+            <li><a href="#"><i class="gmail"> </i></a></li>
+        </ul>
+    </div>
+</div>
+
+<!---->
+<div class="footer" ng-include="'footer.html'"></div>
+</body>
+</html>
+			

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Work</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link rel="shortcut icon" type="image/x-icon" rel="icon" href="favicon.ico">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="MTrudge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+</head>
+<body ng-app="starter">
+<!--header-->
+
+<!-- header -->
+<!-- banner-->
+<div class="banner banner-in">
+    <div class="header" ng-include="'head.html'">
+    </div>
+    <div class="barcontainer">
+        <h6><a href="/index.html">首页</a>/ <span>小觅</span></h6>
+    </div>
+</div>
+<!---->
+<div class="container" ng-controller="workCtrl">
+    <div class="work">
+        <h3 class="fh3">选择心仪的服务人员</h3>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-4 work-grid" ng-repeat="ser in sers.data">
+                <div class="view view-tenth">
+                    <a ng-href="view.html#/service/{{ser.id}}">
+                        <div class="inner_content clearfix">
+                            <div class="product_image">
+                                <img ng-src="{{ser.images}}" class="img-responsive of-my" alt=""/>
+
+                                <div class="mask">
+                                    <h4>exerci tation ullamcorper suscipit</h4>
+
+                                    <p ng-bind="ser.message"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="content-bottom-in">
+            <div class="container">
+                <ul class="social">
+                    <li><a href="#"><i> </i></a></li>
+                    <li><a href="#"><i class="twitter"> </i></a></li>
+                    <li><a href="#"><i class="dribble"> </i></a></li>
+                    <li><a href="#"><i class="gmail"> </i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+        <!---->
+        <div class="footer" ng-include="'footer.html'"></div>
+</body>
+</html>
+			

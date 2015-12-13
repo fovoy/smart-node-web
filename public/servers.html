@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link rel="shortcut icon" type="image/x-icon"  rel="icon" href="favicon.ico">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Trudge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <!--<div  ng-include="'shead.html'">-->
+</head>
+<body ng-app="starter">
+<!--header-->
+<div class="banner banner-in">
+    <div class="header" ng-include="'head.html'">
+    </div>
+    <div class="barcontainer">
+        <h6><a href="/index.html">首页</a>/<span>定制服务</span></h6>
+    </div>
+</div>
+<!---->
+<div class="container" ng-controller="serversCtrl">
+    <div class="services">
+        <h3>行程管家</h3>
+        <div class="grid-top-top" >
+            <div class="col-md-6  service-grid" ng-repeat="server in servers.data">
+                <div class="col-md-6 ">
+                    <a ng-href="view.html#/server/{{server.id}}">
+                        <img ng-src="{{.images}}" class="img-responsive of-my" alt=""/>
+                    </a>
+                </div>
+                <div class="col-md-6  top-grid-right">
+                    <a href="view.html#/server/{{server.id}}"><h4 ng-bind="server.name"></h4></a>
+                    <p ng-bind="server.descr"></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <!--<div class="grid-top-top">-->
+            <!--<div class="col-md-6 ">-->
+                <!--<div class="col-md-6 service-grid">-->
+                    <!--<a href="service.html"><img class="img-responsive " src="images/app.jpg" alt=""/></a>-->
+                <!--</div>-->
+                <!--<div class="col-md-6 top-grid-right">-->
+                    <!--<a href="service.html"><h4>导游服务</h4></a>-->
+                    <!--<p>从预约导游到旅游结束，整个过程将会有我们专业的行程管家为您一对一服务，保证导游在整个过程中的星级服务。</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+            <!--<div class="col-md-6 ">-->
+                <!--<div class="col-md-6 service-grid ">-->
+                    <!--<a href="service.html"><img class="img-responsive grass" src="images/app1.jpg" alt=""/></a>-->
+                <!--</div>-->
+                <!--<div class="col-md-6  top-grid-right">-->
+                    <!--<a href="service.html"><h4>签证服务</h4></a>-->
+                    <!--<p>从准备材料到出签，整个过程将会有我们的专业管家为您一对一服务，随时回答您的疑问，给您提供协助，保证您的星级体验。</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+            <!--<div class="clearfix"></div>-->
+        <!--</div>-->
+
+        <h4 class="content-mid "> 附加服务</h4>
+        <p class="grid-para">我们还将提供地接，导游，租车等服务，详细请质询您的行程管家。</p>
+
+        <div class="simply-grid">
+            <div class="col-md-4 so-left">
+                <ul class="simply-left">
+                    <li><a href="service.html"><span> </span>地接服务</a></li>
+                    <li><a href="service.html"><span> </span>租车服务</a></li>
+                    <li><a href="service.html"><span> </span>特别要求</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content-bottom-in">
+    <div class="container">
+        <ul class="social">
+            <li><a href="#"><i> </i></a></li>
+            <li><a href="#"><i class="twitter"> </i></a></li>
+            <li><a href="#"><i class="dribble"> </i></a></li>
+            <li><a href="#"><i class="gmail"> </i></a></li>
+        </ul>
+    </div>
+</div>
+<!---->
+<div class="footer" ng-include="'footer.html'"></div>
+</body>
+</html>
+			

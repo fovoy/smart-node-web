@@ -1,0 +1,21 @@
+.h1{
+    color: red;
+}
+#id1{
+    color: fuchsia;
+}
+.h2{
+    color: burlywood;
+}
+.h3 {
+    color: yellow;
+}
+.h4 {
+    color: purple;
+}
+
+p{
+    color: brown;
+    background-color: yellow;
+    text-align: center;
+}

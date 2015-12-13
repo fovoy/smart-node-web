@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link rel="shortcut icon" type="image/x-icon"  rel="icon" href="/favicon.ico">
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Trudge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+</head>
+<body ng-app="starter">
+
+<div class="banner banner-in">
+    <!--header-->
+    <div class="header" ng-include="'head.html'">
+    </div>
+    <div class="barcontainer">
+        <h6><a href="/index.html">HOME</a>/ <span>OUR STORY</span></h6>
+    </div>
+</div>
+<!---->
+<div class="container">
+    <div class="story-our" ng-controller="productsCtrl">
+        <h3>商品</h3>
+        <div class="story">
+            <div class="row">
+                <div class="col-sm-6 col-md-6" ng-repeat="prod in prods.data">
+                    <div class="thumbnail">
+                        <a ng-href="view.html#/product/{{prod.id}}" >
+                        <img ng-src="{{prod.images}}" class="img-responsive of-my" alt=""/>
+                        </a>
+                        <div class="products-bottom">
+                            <span class="to-left item-caption">
+                                <p ng-bind="prod.name"></p>
+                                已提供<em>14000</em>次服务
+
+                            </span>
+                            <span class="to-right">
+                            <a ng-href="view.html#/product/{{prod.id}}" class="btn btn-success">选择该服务</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!--<div class="our">-->
+            <!--<div class="col-md-5 our-in">-->
+                <!--<a href="service.html"><img class=" img-responsive" src="images/ab.jpg" alt=""> </a>-->
+            <!--</div>-->
+            <!--<div class="col-md-7 in-our">-->
+                <!--<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
+                    <!--industry's standard dummy text </h5>-->
+
+                <!--<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of-->
+                    <!--classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin-->
+                    <!--professor at Hampden-Sydney College in Virginia</p>-->
+
+                <!--<p class="are">There are many variations of passages of Lorem Ipsum available, but the majority have-->
+                    <!--suffered alteration in some form, by injected humour, or randomised word. Richard McClintock, a-->
+                    <!--Latin professor at Hampden-Sydney College in Virginia.</p>-->
+            <!--</div>-->
+            <!--<div class="clearfix"></div>-->
+        <!--</div>-->
+    </div>
+</div>
+<div class="content-bottom-in">
+    <div class="container">
+        <ul class="social">
+            <li><a href="#"><i> </i></a></li>
+            <li><a href="#"><i class="twitter"> </i></a></li>
+            <li><a href="#"><i class="dribble"> </i></a></li>
+            <li><a href="#"><i class="gmail"> </i></a></li>
+        </ul>
+    </div>
+</div>
+
+<!---->
+<div class="footer" ng-include="'footer.html'"></div>
+</body>
+</html>
+			

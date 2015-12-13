@@ -1,0 +1,7 @@
+# maven ignore
+node_modules
+
+
+# idea ignore
+.idea/
+*.iml
